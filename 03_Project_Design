@@ -1,0 +1,39 @@
+# 3. Project Design Phase
+
+**Project Name:** FitBuddy – AI Fitness Plan Generator using Gemini Models
+
+## System Architecture
+
+* **Frontend:** HTML, CSS and Jinja2
+* **Backend:** FastAPI
+* **AI Layer:** Google Gemini Pro and Gemini Flash
+* **Database:** SQLite with SQLAlchemy
+
+## Main Modules
+
+* User Input Module
+* Workout Plan Generator
+* Nutrition Tip Generator
+* Feedback Update Module
+* Database Module
+* Admin View
+
+## Application Flow
+
+User Input
+↓
+FastAPI Backend
+↓
+Gemini AI
+↓
+Workout Plan & Nutrition Tip
+↓
+SQLite Database
+↓
+Result Display
+
+## Main Pages
+
+* `index.html` – User input form
+* `result.html` – Workout plan and feedback
+* `all_users.html` – Admin view
