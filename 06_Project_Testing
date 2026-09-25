@@ -1,0 +1,30 @@
+# 6. Project Testing Phase
+
+**Project Name:** FitBuddy – AI Fitness Plan Generator using Gemini Models
+
+## Testing Objectives
+
+* Check whether the application works correctly.
+* Verify user input and workout plan generation.
+* Test Gemini AI responses.
+* Check nutrition and recovery tips.
+* Test feedback-based plan updates.
+* Verify user and plan data storage.
+
+## Test Cases
+
+| Test Case | Expected Result |
+|---|---|
+| Enter valid user details | Workout plan is generated |
+| Generate workout plan | Personalized 7-day plan is displayed |
+| Request nutrition tip | Nutrition/recovery tip is displayed |
+| Submit feedback | Workout plan is updated |
+| View all users | User and plan details are displayed |
+| Open `/docs` | FastAPI API documentation is displayed |
+
+## Local Testing
+
+The application can be tested using Uvicorn.
+
+```text
+http://127.0.0.1:8000
