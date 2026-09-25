@@ -1,0 +1,23 @@
+# 1. Brainstorming & Ideation Phase
+
+**Project Name:** FitBuddy – AI Fitness Plan Generator using Gemini Models
+
+## Problem
+People often find it difficult to create a workout plan suitable for their fitness goals.
+
+## Idea
+FitBuddy uses Gemini AI to generate personalized 7-day fitness plans based on user details.
+
+## Key Features
+* Personalized workout plans
+* Nutrition and recovery tips
+* Feedback-based plan updates
+* User and plan storage
+
+## Target Users
+* Students
+* Beginners
+* Fitness enthusiasts
+
+## Expected Outcome
+To develop a simple AI-powered application that provides personalized fitness plans.
