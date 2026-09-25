@@ -1,0 +1,27 @@
+# 4. Project Planning Phase
+
+**Project Name:** FitBuddy – AI Fitness Plan Generator using Gemini Models
+
+## Development Plan
+
+1. Select Gemini AI models and design the architecture.
+2. Set up the Python development environment.
+3. Develop workout and nutrition features.
+4. Implement FastAPI routes and database.
+5. Design the frontend using HTML, CSS and Jinja2.
+6. Test the application locally.
+7. Prepare the project for demonstration.
+
+## Tools & Technologies
+
+* Python
+* FastAPI
+* Google Gemini AI
+* SQLite
+* SQLAlchemy
+* HTML/CSS/Jinja2
+* Git
+
+## Expected Deliverable
+
+A working AI-powered fitness application that generates personalized 7-day workout plans and nutrition tips.
