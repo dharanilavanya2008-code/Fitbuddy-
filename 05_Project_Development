@@ -1,0 +1,36 @@
+# 5. Project Development Phase
+
+**Project Name:** FitBuddy – AI Fitness Plan Generator using Gemini Models
+
+## Development
+
+* Developed the backend using FastAPI.
+* Integrated Google Gemini AI for workout plan generation.
+* Used Gemini Pro for personalized 7-day workout plans.
+* Used Gemini Flash for nutrition and recovery tips.
+* Created HTML pages using Jinja2.
+* Implemented SQLite database using SQLAlchemy.
+* Added feedback-based workout plan updates.
+* Created API routes for generating and updating plans.
+
+## Main API Routes
+
+* `/` – Home page
+* `/generate-workout` – Generate workout plan
+* `/submit-feedback` – Update workout plan using feedback
+* `/view-all-users` – View users and plans
+
+## Development Tools
+
+* Python
+* FastAPI
+* Google Gemini AI
+* HTML/CSS/Jinja2
+* SQLite
+* SQLAlchemy
+* Uvicorn
+* Git
+
+## Expected Output
+
+A working FitBuddy application that generates personalized workout plans and nutrition tips using Gemini AI.
