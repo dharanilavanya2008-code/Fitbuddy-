@@ -1,0 +1,50 @@
+# 7. Project Documentation Phase
+
+**Project Name:** FitBuddy – AI Fitness Plan Generator using Gemini Models
+
+## Project Overview
+
+FitBuddy is a web-based AI application that generates personalized 7-day fitness plans based on user details and fitness goals.
+
+## Technologies Used
+
+* Python
+* FastAPI
+* Google Gemini AI
+* HTML, CSS and Jinja2
+* SQLite
+* SQLAlchemy
+* Uvicorn
+* Git
+
+## Main Features
+
+* Personalized workout plan generation
+* Nutrition and recovery tips
+* Feedback-based plan updates
+* User and plan storage
+* Admin/coach view
+
+## Application Workflow
+
+User enters details  
+↓  
+FastAPI processes the request  
+↓  
+Gemini AI generates the fitness plan  
+↓  
+Plan and nutrition tips are displayed  
+↓  
+User feedback can update the plan  
+↓  
+Data is stored in the database
+
+## Project Pages
+
+* `index.html` – User input
+* `result.html` – Workout plan and feedback
+* `all_users.html` – User and plan view
+
+## Conclusion
+
+FitBuddy provides an AI-powered approach to generating personalized fitness plans using Google Gemini models.
