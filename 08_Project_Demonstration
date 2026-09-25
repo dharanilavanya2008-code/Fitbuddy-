@@ -1,0 +1,28 @@
+# 8. Project Demonstration Phase
+
+**Project Name:** FitBuddy – AI Fitness Plan Generator using Gemini Models
+
+## Demonstration Steps
+
+1. Open the FitBuddy application.
+2. Enter the user's name, age, weight, fitness goal and workout intensity.
+3. Click the button to generate the workout plan.
+4. Display the personalized 7-day workout plan.
+5. Display the nutrition and recovery tip.
+6. Submit feedback about the workout plan.
+7. Demonstrate how the plan is updated using the feedback.
+8. Show the stored user and plan details.
+9. Demonstrate the FastAPI API documentation at `/docs`.
+
+## Demonstration Features
+
+* Personalized 7-day workout plan
+* Gemini AI integration
+* Nutrition and recovery tips
+* Feedback-based plan update
+* User and plan storage
+* Admin/coach view
+
+## Expected Demonstration Result
+
+The FitBuddy application successfully generates and updates personalized fitness plans using Gemini AI.
