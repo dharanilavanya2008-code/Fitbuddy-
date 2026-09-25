@@ -1,0 +1,29 @@
+# 2. Requirement Analysis Phase
+
+**Project Name:** FitBuddy – AI Fitness Plan Generator using Gemini Models
+
+## Functional Requirements
+
+* User can enter name, age, weight, goal, and workout intensity.
+* System generates a personalized 7-day workout plan.
+* System provides nutrition and recovery tips.
+* User can submit feedback to update the workout plan.
+* System stores user and plan details.
+* Admin can view users and their workout plans.
+
+## Non-Functional Requirements
+
+* Simple and user-friendly interface.
+* Fast AI response.
+* Secure data storage.
+* Reliable and scalable application.
+
+## Technology Requirements
+
+* Python
+* FastAPI
+* Google Gemini AI
+* HTML, CSS, Jinja2
+* SQLite and SQLAlchemy
+* Uvicorn
+* Git
