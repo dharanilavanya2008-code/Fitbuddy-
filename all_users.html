@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>FitBuddy - All Users</title>
+
+    <style>
+
+        body {
+            margin: 0;
+
+            padding: 30px;
+
+            font-family: Arial, sans-serif;
+
+            background: #f4f6f8;
+        }
+
+        .container {
+            max-width: 1400px;
+
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .top-link {
+            display: inline-block;
+
+            margin-bottom: 20px;
+
+            text-decoration: none;
+
+            background: #222;
+
+            color: white;
+
+            padding: 10px 15px;
+
+            border-radius: 7px;
+        }
+
+        .user-card {
+            background: white;
+
+            margin-bottom: 25px;
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .info-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(150px, 1fr));
+
+            gap: 12px;
+
+            margin-bottom: 20px;
+        }
+
+        .info {
+            background: #f1f3f5;
+
+            padding: 12px;
+
+            border-radius: 7px;
+        }
+
+        .plan {
+            background: #111;
+
+            color: white;
+
+            padding: 20px;
+
+            border-radius: 8px;
+
+            white-space: pre-wrap;
+
+            overflow-x: auto;
+
+            line-height: 1.5;
+
+            margin-top: 10px;
+        }
+
+        .updated {
+            background: #333;
+        }
+
+        .delete-button {
+            background: #c92a2a;
+
+            color: white;
+
+            border: none;
+
+            padding: 10px 15px;
+
+            border-radius: 7px;
+
+            cursor: pointer;
+
+            margin-top: 15px;
+        }
+
+        .empty {
+            text-align: center;
+
+            padding: 50px;
+
+            background: white;
+
+            border-radius: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>FitBuddy Admin Dashboard</h1>
+
+    <a
+        class="top-link"
+        href="/"
+    >
+        ← Home
+    </a>
+
+
+    {% if users %}
+
+        {% for user in users %}
+
+        <div class="user-card">
+
+            <h2>
+                {{ user.username }}
+            </h2>
+
+            <div class="info-grid">
+
+                <div class="info">
+                    <strong>User ID</strong>
+                    <br>
+                    {{ user.user_id }}
+                </div>
+
+                <div class="info">
+                    <strong>Age</strong>
+                    <br>
+                    {{ user.age }}
+                </div>
+
+                <div class="info">
+                    <strong>Weight</strong>
+                    <br>
+                    {{ user.weight }} kg
+                </div>
+
+                <div class="info">
+                    <strong>Goal</strong>
+                    <br>
+                    {{ user.goal }}
+                </div>
+
+                <div class="info">
+                    <strong>Intensity</strong>
+                    <br>
+                    {{ user.intensity }}
+                </div>
+
+            </div>
+
+
+            {% for plan in user.plans %}
+
+                <h3>
+                    Original Workout Plan
+                </h3>
+
+                <div class="plan">
+{{ plan.original_plan }}
+                </div>
+
+
+                {% if plan.updated_plan %}
+
+                    <h3>
+                        Updated Workout Plan
+                    </h3>
+
+                    <div class="plan updated">
+{{ plan.updated_plan }}
+                    </div>
+
+                {% endif %}
+
+
+                {% if plan.nutrition_tip %}
+
+                    <h3>
+                        Nutrition / Recovery Tip
+                    </h3>
+
+                    <p>
+                        {{ plan.nutrition_tip }}
+                    </p>
+
+                {% endif %}
+
+            {% endfor %}
+
+
+            <form
+                action="/delete-user/{{ user.user_id }}"
+                method="post"
+                onsubmit="return confirm('Delete this user and their plans?');"
+            >
+
+                <button
+                    class="delete-button"
+                    type="submit"
+                >
+                    Delete User
+                </button>
+
+            </form>
+
+        </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="empty">
+
+            <h2>
+                No users yet
+            </h2>
+
+            <p>
+                Generate your first fitness plan.
+            </p>
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>

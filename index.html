@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FitBuddy - AI Fitness Planner</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.75),
+                    rgba(0, 0, 0, 0.75)
+                ),
+                url('/static/images/gym.jpg');
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: white;
+            padding: 30px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 650px;
+
+            background: rgba(20, 20, 20, 0.95);
+
+            padding: 35px;
+
+            border-radius: 18px;
+
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #cccccc;
+            margin-bottom: 30px;
+        }
+
+        .admin-link {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .admin-link a {
+            color: #8ab4f8;
+            text-decoration: none;
+        }
+
+        label {
+            display: block;
+            margin-top: 16px;
+            margin-bottom: 7px;
+            font-weight: 500;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 13px;
+
+            border: none;
+            border-radius: 8px;
+
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+
+            margin-top: 25px;
+
+            padding: 14px;
+
+            border: none;
+            border-radius: 8px;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            background: #ffffff;
+            color: #111111;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>FitBuddy</h1>
+
+    <p class="subtitle">
+        AI Fitness Plan Generator
+    </p>
+
+    <div class="admin-link">
+        <a href="/view-all-users">
+            View All Users
+        </a>
+    </div>
+
+    <form action="/generate-workout" method="post">
+
+        <label for="username">
+            Name
+        </label>
+
+        <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter your name"
+            required
+        >
+
+        <label for="user_id">
+            User ID
+        </label>
+
+        <input
+            type="text"
+            id="user_id"
+            name="user_id"
+            placeholder="Example: FB001"
+            required
+        >
+
+        <label for="age">
+            Age
+        </label>
+
+        <input
+            type="number"
+            id="age"
+            name="age"
+            min="1"
+            max="119"
+            required
+        >
+
+        <label for="weight">
+            Weight (kg)
+        </label>
+
+        <input
+            type="number"
+            id="weight"
+            name="weight"
+            step="0.1"
+            min="1"
+            max="500"
+            required
+        >
+
+        <label for="goal">
+            Fitness Goal
+        </label>
+
+        <select id="goal" name="goal" required>
+            <option value="">
+                Select your goal
+            </option>
+
+            <option value="weight loss">
+                Weight Loss
+            </option>
+
+            <option value="muscle gain">
+                Muscle Gain
+            </option>
+
+            <option value="general wellness">
+                General Wellness
+            </option>
+
+            <option value="flexibility">
+                Flexibility
+            </option>
+        </select>
+
+        <label for="intensity">
+            Workout Intensity
+        </label>
+
+        <select id="intensity" name="intensity" required>
+            <option value="">
+                Select intensity
+            </option>
+
+            <option value="low">
+                Low
+            </option>
+
+            <option value="medium">
+                Medium
+            </option>
+
+            <option value="high">
+                High
+            </option>
+        </select>
+
+        <button type="submit">
+            Generate 7-Day Plan
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
